@@ -1,0 +1,122 @@
+override *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 2.7rem;
+  margin: 0px;
+  padding: 0px;
+  background-color: hsl(0, 0%, 97%);
+}
+header {
+  font-size: 1.7rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(10, 37, 64, 0.32);
+  background-color: white;
+  padding: 20px 0;
+}
+.header__name {
+  font-weight: 600;
+  margin-left: 32px;
+}
+.header-notifications{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0;
+  margin-right: 32px;
+}
+.header-notifications div:nth-child(2){
+  padding-left: 8px;
+}
+.header-notifications div:nth-child(3){
+  position: absolute;
+  right: 24;
+  top: 6;
+}
+main {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 8rem;
+}
+main h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  color: #103b66;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.8rem;
+}
+main h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #103b66;
+}
+main h4 a {
+  text-decoration: none;
+}
+.main__first-card {
+  background-color: #ffffff;
+  width: 95%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #103b66;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid #e1e4fe;
+}
+.main__subheader {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 2.4rem;
+  margin-top: 4.8rem;
+  justify-content: flex-start;
+}
+.main__conatiner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2.8rem;
+  column-gap: 2.4rem;
+}
+.main__card {
+  background: #ffffff;
+  box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06),
+    0px 2px 4px rgba(50, 50, 71, 0.06);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.main__card h6{
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #103b66;
+}
+.main__card img{
+  width: 13rem;
+  height: 10rem;
+}

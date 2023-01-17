@@ -1,0 +1,247 @@
+override *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 2.7rem;
+  margin: 0px;
+  padding: 0px;
+  background-color: hsl(0, 0%, 97%);
+  color: #103b66;
+}
+header {
+  font-size: 1.7rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(10, 37, 64, 0.32);
+  background-color: white;
+  padding: 20px 0;
+}
+.header__name {
+  font-weight: 600;
+  margin-left: 32px;
+}
+.header-notifications{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0;
+  margin-right: 32px;
+}
+.header-notifications div:nth-child(2){
+  padding-left: 8px;
+}
+.header-notifications div:nth-child(3){
+  position: absolute;
+  right: 24;
+  top: 6;
+}
+nav {
+  color: #546679;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  display: flex;
+  padding: 28px 24px;
+}
+.nav__input-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 9px 4px 9px 40px;
+  gap: 8px;
+  width: 425px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid rgba(10, 37, 64, 0.32);
+  border-radius: 6px;
+  background: transparent url("./images/Icon.png") no-repeat 13px center;
+}
+
+.nav__childs {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border-right: 1px solid #546679;
+  padding-right: 1.6rem;
+}
+.nav__childs-padding-left {
+  padding-left: 1.6rem;
+}
+
+.nav__childs--no-border {
+  border: 0;
+  padding-right: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.4rem;
+  margin: 0% 10% 2% 10%;
+}
+
+.main__card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.main__card--image img {
+  height: 100%;
+}
+.main__card--content-box {
+  padding: 1.6rem;
+}
+
+.main__card--button {
+  padding: 4px 8px;
+  width: fit-content;
+  height: fit-content;
+}
+.main_card--headline {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 0;
+}
+.main_card--text {
+  font-weight: 400;
+  color: #233b53;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin: 12px 0px;
+}
+.main__card--variants {
+  color: #6c7c8c;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin: 12px 0px;
+}
+.main__card--prices {
+  display: flex;
+  column-gap: 8px;
+}
+.main__card--prices-default{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.main__card--prices-first {
+  text-decoration: line-through;
+}
+.main__card--prices-second{
+  color: #00C48C;
+}
+.main__card--prices-third {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  font-style: normal;
+}
+
+/* These are the Toggle Classes */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Toggle Classes End here */
+
+/* These are Dropdown Styles */
+.dropdown {
+  position: relative;
+  width: 230px;
+  filter: url(#goo);
+}
+.dropdown__face {
+  display: block;
+  position: relative;
+}
+.dropdown__arrow {
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg) translateY(-50%);
+  transform-origin: right;
+}
+.dropdown input {
+  display: none;
+}
+/* Dropdown Styles End */
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  width: 149px;
+  height: 48px;
+  background: #21b8f9;
+  box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08),
+    0px 4px 8px rgba(50, 50, 71, 0.06);
+  border-radius: 5px;
+  border: 0;
+  color: white;
+}
